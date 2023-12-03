@@ -1,0 +1,24 @@
+{
+  "eslint.options": {
+    "overrideConfigFile": "eslint.config.mjs"
+  },
+  "eslint.experimental.useFlatConfig": true,
+  "json.validate.enable": false,
+  "[json]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[json5]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    "json",
+    "jsonc"
+  ]
+}

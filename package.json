@@ -3,9 +3,14 @@
   "version": "0.0.1",
   "description": "A project that demonstrates how to set up ESLint to lint JSON files using flat config files.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "ESLINT_USE_FLAT_CONFIG=true npx eslint --config eslint.config.mjs ."
   },
   "keywords": [],
   "author": "Eric Hosick <erichosick@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.55.0",
+    "eslint-plugin-jsonc": "^2.10.0"
+  }
 }
