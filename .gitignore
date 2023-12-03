@@ -1,0 +1,14 @@
+
+# NOTE: Git implies **/ for each listed name, ignoring them recursively by
+# default. To ignore a specific item, pre-pend its path relative to the
+# repository root.
+
+# mac OS files
+.DS_Store
+
+# node temporary files
+node_modules
+
+# pnpm-specific temporary files
+.pnpm/
+.pnpm-debug.log*
