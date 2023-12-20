@@ -1,0 +1,4 @@
+/// This should be totally ingored and have no errors: including no line length errors becuase we are ignoring all dist folders.
+{
+  'a': totall invalid json file
+}

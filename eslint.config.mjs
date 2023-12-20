@@ -2,6 +2,12 @@ import jsonc from 'eslint-plugin-jsonc';
 
 const eslintConfigObjects = [
   {
+    /// Globally ignores files and directories. Note that for flat config,
+    /// node_modules is ignored by default.
+    // '!node_modules' /// unignore node_modules
+    ignores: ['**/dist'],
+  },
+  {
     files: ['**/*.json', '**/*.jsonc', '**/*.json5'],
     plugins: {
       jsonc,
