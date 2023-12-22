@@ -20,7 +20,6 @@ const eslintConfigObjects = [
       'jsonc/auto': 'off',
       /// Allow json files to have comments
       'jsonc/no-comments': 'off',
-
       /// Indent with 2 spaces
       'jsonc/indent': ['error', 2, {}],
       /// Support arrays with and without new lines but they can't mix
@@ -31,11 +30,13 @@ const eslintConfigObjects = [
       /// Not all keys are camelCase
       'jsonc/key-name-casing': 'off',
       /// see https://ota-meshi.github.io/eslint-plugin-jsonc/rules/comma-dangle.html
-      'jsonc/comma-dangle': ['error', 'always-multiline'],
+      /// json files should not have dangling commas. Tools like jq will error:
+      /// 'jq: parse error: Expected another key-value pair at line 4, column 3'
+      // 'jsonc/comma-dangle': ['error', 'never'], /// default
     },
   },
   {
-    files: ['**/package.json', '**/settings.json'],
+    files: ['**/*.json'],
     plugins: {
       jsonc,
     },
@@ -43,19 +44,9 @@ const eslintConfigObjects = [
       parser: jsonc,
     },
     rules: {
-      'jsonc/comma-dangle': ['error', 'never'],
-    },
-  },
-  {
-    files: ['**/package.json'],
-    plugins: {
-      jsonc,
-    },
-    languageOptions: {
-      parser: jsonc,
-    },
-    rules: {
-      /// package.json should not have comments.
+      /// No matter how much it would be cool to have comments in json files,
+      /// it's not supported by the json spec. We get errors tools like jq and
+      /// node.
       'jsonc/no-comments': 'error'
     },
   },  

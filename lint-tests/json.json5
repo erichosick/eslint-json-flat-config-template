@@ -9,16 +9,16 @@
     1,
     2,
     3,
-    4,
+    4
   ],
   "object": {
     "a": 1,
     "b": {
       "b": 2,
       "a": 1,
-      "c": 3,
+      "c": 3
     },
     // eslint-disable-next-line jsonc/quotes
-    "c": ["a", "b", 'c'],
-  },
+    "c": ["a", "b", 'c']
+  }
 } 

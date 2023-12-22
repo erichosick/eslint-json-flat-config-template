@@ -1,10 +1,6 @@
-/// This file contains settings that are specific to the JSON linting tests
 {
-  /// Enables us to use the extended configuration
   "eslint.options": {
     "overrideConfigFile": "eslint.config.mjs"
   },
-  /// Disable validation of JSON files using VS Code's built in JSON validator
-  /// see https://code.visualstudio.com/Docs/languages/json#_intellisense-and-validation
   "json.validate.enable": false
 }
