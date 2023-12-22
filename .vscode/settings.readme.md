@@ -41,5 +41,5 @@
 Documenting options in `settings.json` help others come up to speed faster.
 
 * Files with `json` extensions can not have comments.
-* Adding new properties to `settings.json` results in a warning as `settings.json` have a schema (see (Preferences)[https://github.com/microsoft/vscode/blob/2ae55bc71641241d99cd1c79849c9823426790f2/src/vs/workbench/services/preferences/common/preferences.ts])
+* Adding new properties to `settings.json` results in a warning as `settings.json` have a schema (see [Preferences](https://github.com/microsoft/vscode/blob/2ae55bc71641241d99cd1c79849c9823426790f2/src/vs/workbench/services/preferences/common/preferences.ts)).
 * Visual Studio Code does not support `settings.jsonc` or `settings.json5`
