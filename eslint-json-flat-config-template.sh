@@ -186,7 +186,7 @@ done
 
 
 # URL of the eslint.config.mjs file
-ESLINT_CONFIG_URL="https://raw.githubusercontent.com/erichosick/eslint-json-flat-config-template/main/templates/eslint.config.mjs"
+ESLINT_CONFIG_URL="https://raw.githubusercontent.com/erichosick/eslint-json-flat-config-template/main/eslint.config.mjs"
 
 # Check if eslint.config.mjs exists in the root directory
 if [ ! -f "eslint.config.mjs" ]; then
@@ -196,5 +196,24 @@ else
     # Compare the contents of the existing file with the one from the URL
     if ! curl -s "$ESLINT_CONFIG_URL" | cmp -s "eslint.config.mjs" -; then
         echo "An eslint.config.mjs file already exists, and differs from the online template. Please manually merge the configuration from the online template into your existing config file."
+    fi
+fi
+
+# URL of the settings.readme.md file
+SETTINGS_README_URL="https://raw.githubusercontent.com/erichosick/eslint-json-flat-config-template/main/.vscode/settings.readme.md"
+
+# Check if settings.readme.md exists in the .vscode directory
+if [ ! -f ".vscode/settings.readme.md" ]; then
+    echo "Downloading settings.readme.md from $SETTINGS_README_URL..."
+
+    # Create .vscode directory if it doesn't exist
+    mkdir -p ".vscode"
+
+    # Download the file
+    curl -o ".vscode/settings.readme.md" "$SETTINGS_README_URL"
+else
+    # Compare the contents of the existing file with the one from the URL
+    if ! curl -s "$SETTINGS_README_URL" | cmp -s ".vscode/settings.readme.md" -; then
+        echo "A settings.readme.md file already exists, and differs from the online template. Please manually merge the contents from the online template into your existing file."
     fi
 fi
