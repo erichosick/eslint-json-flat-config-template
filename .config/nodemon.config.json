@@ -1,0 +1,11 @@
+
+{
+  "verbose": true,
+  "ignore": [],
+  "delay": 200,
+  "ext": "",
+  "watch": "*.*",
+  "rule": "**.*/*"
+}
+
+
