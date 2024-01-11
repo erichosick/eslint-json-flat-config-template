@@ -45,8 +45,8 @@ const eslintConfigObjects = [
     },
     rules: {
       /// No matter how much it would be cool to have comments in json files,
-      /// it's not supported by the json spec. We get errors tools like jq and
-      /// node.
+      /// it's not supported by the json spec. Tools like jq and
+      /// node will throw errors if a json file has comments.
       'jsonc/no-comments': 'error'
     },
   },  
