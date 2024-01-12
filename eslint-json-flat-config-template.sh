@@ -161,7 +161,7 @@ CONFIGURATIONS=(
     '."[jsonc]" += {"editor.defaultFormatter": "dbaeumer.vscode-eslint"}'
     '."[json5]" += {"editor.defaultFormatter": "dbaeumer.vscode-eslint"}'
     '.["eslint.format.enable"] = true'
-    '.["editor.codeActionsOnSave"] += {"source.fixAll.eslint": true}'
+    '.["editor.codeActionsOnSave"] += {"source.fixAll.eslint": "explicit"}'
 )
 
 # Apply configurations to settings.json

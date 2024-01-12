@@ -1,6 +1,6 @@
 {
   "name": "eslint-json-flat-config-template",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A project that demonstrates how to set up ESLint to lint JSON files using flat config files.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
